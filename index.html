@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+      <h1 class="title">Hello World!</h1>
+      <p id="currentTime"></p>
+      <script src="script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bharat Manga Universe</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:#050505;
+color:white;
+font-family:Montserrat,sans-serif;
+
+}
+
+a{
+
+text-decoration:none;
+color:white;
+
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:20px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#000;
+z-index:1000;
+border-bottom:2px solid #b30000;
+
+}
+
+.logo{
+
+font-family:Cinzel;
+font-size:32px;
+color:#fff;
+
+}
+
+.logo span{
+
+color:#e60000;
+
+}
+
+nav{
+
+display:flex;
+gap:35px;
+
+}
+
+nav a{
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#2196f3;
+
+}
+
+.hero{
+
+margin-top:90px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+height:650px;
+
+}
+
+.card{
+
+position:relative;
+overflow:hidden;
+cursor:pointer;
+
+}
+
+.card img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+
+}
+
+.card:hover img{
+
+transform:scale(1.08);
+
+}
+
+.overlay{
+
+position:absolute;
+bottom:0;
+width:100%;
+padding:25px;
+background:linear-gradient(transparent,black);
+
+}
+
+.overlay h2{
+
+font-family:Cinzel;
+font-size:34px;
+
+}
+
+.overlay p{
+
+margin-top:10px;
+font-size:15px;
+
+}
+
+.intro{
+
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+
+}
+
+.intro h1{
+
+font-family:Cinzel;
+font-size:60px;
+text-align:center;
+
+}
+
+.intro span{
+
+color:#d40000;
+
+}
+
+.intro p{
+
+margin-top:20px;
+width:80%;
+text-align:center;
+line-height:1.8;
+
+}
+
+.btn{
+
+margin-top:35px;
+padding:15px 35px;
+background:#d40000;
+border:none;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:.4s;
+
+}
+
+.btn:hover{
+
+background:#2196f3;
+
+}
+
+section{
+
+padding:80px 8%;
+
+}
+
+.title{
+
+font-size:42px;
+font-family:Cinzel;
+margin-bottom:50px;
+color:white;
+
+}
+
+.title span{
+
+color:#e60000;
+
+}
+
+.theme-grid{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+
+}
+
+.theme{
+
+background:#111;
+border:2px solid #222;
+transition:.4s;
+overflow:hidden;
+
+}
+
+.theme:hover{
+
+transform:translateY(-8px);
+border-color:#2196f3;
+
+}
+
+.theme img{
+
+width:100%;
+height:220px;
+object-fit:cover;
+
+}
+
+.theme h3{
+
+padding:20px;
+font-size:24px;
+font-family:Cinzel;
+
+}
+
+.pricing{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+
+}
+
+.price{
+
+background:#101010;
+padding:40px;
+text-align:center;
+border:2px solid #222;
+transition:.4s;
+
+}
+
+.price:hover{
+
+transform:translateY(-10px);
+border-color:#d40000;
+
+}
+
+.price h2{
+
+font-size:38px;
+font-family:Cinzel;
+
+}
+
+.price h1{
+
+font-size:55px;
+margin:20px 0;
+color:#2196f3;
+
+}
+
+.price ul{
+
+list-style:none;
+margin:30px 0;
+
+}
+
+.price li{
+
+margin:15px;
+
+}
+
+.price button{
+
+padding:15px 40px;
+background:#d40000;
+border:none;
+color:white;
+cursor:pointer;
+font-size:18px;
+
+}
+
+.manga{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+
+}
+
+.chapter{
+
+background:#111;
+overflow:hidden;
+transition:.4s;
+
+}
+
+.chapter:hover{
+
+transform:scale(1.03);
+
+}
+
+.chapter img{
+
+width:100%;
+height:320px;
+object-fit:cover;
+
+}
+
+.chapter h3{
+
+padding:20px;
+font-family:Cinzel;
+
+}
+
+footer{
+
+padding:50px;
+text-align:center;
+background:black;
+border-top:2px solid #b30000;
+
+}
+
+footer h2{
+
+font-family:Cinzel;
+font-size:34px;
+
+}
+
+footer p{
+
+margin-top:20px;
+color:#999;
+
+}
+
+@media(max-width:900px){
+
+.hero{
+
+grid-template-columns:1fr;
+height:auto;
+
+}
+
+.intro{
+
+padding:60px;
+
+}
+
+.intro h1{
+
+font-size:45px;
+
+}
+
+}
+
+</style>
+
+</head>
+<body>
+
+<header>
+
+<div class="logo">
+<span>BHARAT</span> MANGA
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Library</a>
+<a href="#">Heroes</a>
+<a href="#">Themes</a>
+<a href="#">Pricing</a>
+<a href="#">Community</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div class="card">
+
+<img src="indra__anime_hindu_thunder_god__uranus__by_harshdluffy_dhbadqb-pre.jpg">
+
+<div class="overlay">
+
+<h2>VAJRA</h2>
+
+<p>The Thunder Guardian</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="fire god.jpg">
+
+<div class="overlay">
+
+<h2>AGNI</h2>
+
+<p>The Flame Keeper</p>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="lucid-origin_Medusa_from_Greek_mythology_standing_in_darkness_half_of_her_face_hidden_in_shad-0.jpg">
+
+<div class="overlay">
+
+<h2>NAAGINI</h2>
+
+<p>The Serpent Protector</p>
+
+</div>
+
+</div>
+
+<div class="intro">
+
+<h1>INDIA'S NEXT <span>SUPERHEROES</span></h1>
+
+<p>
+
+Experience Indian Manga inspired by mythology,
+history, culture and futuristic storytelling.
+
+</p>
+
+<button class="btn">Explore Universe</button>
+
+</div>
+
+</div>
+
+<section>
+
+<h1 class="title">
+Explore <span>Themes</span>
+</h1>
+
+<div class="theme-grid">
+
+<div class="theme">
+<img src="mythology.jpeg">
+<h3>Mythology</h3>
+</div>
+
+<div class="theme">
+<img src="flat,750x,075,f-pad,750x1000,f8f8f8.jpg">
+<h3>Adventure</h3>
+</div>
+
+<div class="theme">
+<img src="61VbJ1JORRL._AC_UF894,1000_QL80_.jpg">
+<h3>Sci-Fi</h3>
+</div>
+
+<div class="theme">
+<img src="750328.webp">
+<h3>Historical</h3>
+</div>
+
+<div class="theme">
+<img src="HORRR.avif">
+<h3>Horror</h3>
+</div>
+
+<div class="theme">
+<img src="FIGRAV120011989_2.jpg">
+<h3>Comedy</h3>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+Membership <span>Plans</span>
+</h1>
+
+<div class="pricing">
+
+<div class="price">
+
+<h2>PATHIK</h2>
+
+<h1>₹0</h1>
+
+<ul>
+
+<li>Free Chapters</li>
+<li>Community Access</li>
+<li>Basic Reading</li>
+
+</ul>
+
+<button>Start</button>
+
+</div>
+
+<div class="price">
+
+<h2>YODDHA</h2>
+
+<h1>₹149</h1>
+
+<ul>
+
+<li>Unlimited Reading</li>
+<li>HD Quality</li>
+<li>Early Chapters</li>
+
+</ul>
+
+<button>Join</button>
+
+</div>
+
+<div class="price">
+
+<h2>MAHAVEER</h2>
+
+<h1>₹499</h1>
+
+<ul>
+
+<li>Everything Included</li>
+<li>Exclusive Content</li>
+<li>Premium Merchandise</li>
+
+</ul>
+
+<button>Become Legend</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h1 class="title">
+Latest <span>Releases</span>
+</h1>
+
+<div class="manga">
+
+<div class="chapter">
+
+<img src="FIREEE.jpg">
+
+<h3>Agni Chapter 24</h3>
+
+</div>
+
+<div class="chapter">
+
+<img src="vayu__anime_hindu_god_of__wind__air__gas__by_harshdluffy_dhbl7ho-pre.jpg">
+
+<h3>Vajra Chapter 17</h3>
+
+</div>
+
+<div class="chapter">
+
+<img src="raf,360x360,075,t,fafafa_ca443f4786.u3.jpg">
+
+<h3>Naagini Chapter 12</h3>
+
+</div>
+
+<div class="chapter">
+
+<img src="cartoon-portrait-hindu-god_23-2151782043.avif">
+
+<h3>Kali Sentinel</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>BHARAT MANGA UNIVERSE</h2>
+
+<p>
+
+Made with ❤️ for Indian Manga Fans
+
+</p>
+
+</footer>
+
+<script>
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach(card=>{
+
+card.addEventListener("mouseenter",()=>{
+
+card.style.transform="scale(1.02)";
+
+});
+
+card.addEventListener("mouseleave",()=>{
+
+card.style.transform="scale(1)";
+
+});
+
+});
+
+document.querySelector(".btn").onclick=function(){
+
+window.scrollTo({
+
+top:700,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
